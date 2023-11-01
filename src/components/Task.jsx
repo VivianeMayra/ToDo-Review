@@ -3,7 +3,7 @@ import styles from "./task.module.css"
 import { useState } from "react"
 
 export default function Task({ task, onDelete, onTaskFinish }) {
-  const [isFinished, setIsFinished] = useState(0)
+  const [isFinished, setIsFinished] = useState(false)
 
   const handleDelete = () => {
     if (isFinished) {

@@ -50,9 +50,9 @@ export default function Tasks() {
         </div>
       ) : (
         <div className={styles.containerListTask}>
-          {task.map((taskContent, index) => (
+          {task.map((taskContent) => (
             <Task
-              key={index}
+              key={taskContent}
               task={taskContent}
               onDelete={handleDeleteTask}
               onTaskFinish={handleTaskFinish}
