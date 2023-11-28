@@ -42,7 +42,7 @@ export default function Tasks() {
       </div>
       {task.length === 0 ? (
         <div className={styles.containerList}>
-          <ClipboardText size={56} />
+          <ClipboardText size={56} style={{ marginTop: "1rem" }} />
           <div className={styles.containerText}>
             <h3>Você ainda não tem tarefas cadastradas</h3>
             <p>Crie tarefas e organize seus itens a fazer</p>

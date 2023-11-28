@@ -4,6 +4,7 @@ import { useState } from "react"
 
 export default function Task({ task, onDelete, onTaskFinish }) {
   const [isFinished, setIsFinished] = useState(false)
+  const [isFocused, setIsFocused] = useState(false)
 
   const handleDelete = () => {
     if (isFinished) {
@@ -15,7 +16,18 @@ export default function Task({ task, onDelete, onTaskFinish }) {
   const handleToggleFinish = () => {
     const newIsFinish = !isFinished
     setIsFinished(newIsFinish) // alterna o estado de concluido
+
+    setIsFocused(newIsFinish)
+
     onTaskFinish(newIsFinish) //chama a função para atualizar o contador
+  }
+
+  const handleFocus = () => {
+    setIsFocused(true)
+  }
+
+  const handleBlur = () => {
+    setIsFocused(false)
   }
 
   return (
@@ -27,8 +39,24 @@ export default function Task({ task, onDelete, onTaskFinish }) {
       <div
         className={`${styles.tasks} ${isFinished ? styles.finishedTask : ""}`}
       >
-        <button className={styles.checkContainer} onClick={handleToggleFinish}>
-          <div>{isFinished ? "✔" : ""}</div>
+        <button
+          className={styles.checkContainer}
+          onClick={handleToggleFinish}
+          onFocus={handleFocus}
+          onBlur={handleBlur}
+        >
+          <div
+            style={{
+              background: isFinished
+                ? "var(--purple-100, #5E60CE)"
+                : isFocused
+                ? "var(--purple-100, #5E60CE)"
+                : "",
+              border: isFocused && "2px solid var(--purple-100, #5E60CE)",
+            }}
+          >
+            {isFinished && "✔"}
+          </div>
         </button>
         <p className={isFinished ? styles.finishedText : ""}>{task}</p>
         <button onClick={handleDelete} className={styles.buttonDelete}>

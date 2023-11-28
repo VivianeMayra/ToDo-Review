@@ -23,7 +23,7 @@
     border: 1px solid var(--Gray-700, #0D0D0D);
     background: var(--Gray-500, #262626);
     color: var(--Gray-300, #808080);
-    padding: 5px;
+    padding: 10px 13px;
     border: none;
     resize: none;
     
@@ -38,7 +38,7 @@
 .buttonNewTask{
     display: flex;
     border: none;
-    padding: 16px;
+    padding: 22px;
     justify-content: center;
     align-items: center;
     gap: 8px;
@@ -47,5 +47,8 @@
 
     color: white;
     cursor: pointer;
+}
 
+.buttonNewTask:hover{ 
+    background-color: var(--blue-50, #4EA8DE);
 }

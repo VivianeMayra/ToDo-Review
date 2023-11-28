@@ -33,6 +33,7 @@ export default function Input() {
           value={newTask}
           onChange={handleChange}
           placeholder="Adicione uma nova tarefa"
+          required
         />
         <button type="submit" className={styles.buttonNewTask}>
           {" "}

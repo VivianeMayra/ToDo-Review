@@ -28,11 +28,14 @@ box-shadow: 0px 2px 8px 0px rgba(0, 0, 0, 0.06);
 
 .tasks p{
 color: var(--Gray-100, #F2F2F2);
+width: 100%;
 font-family: Inter;
 font-size: 14px;
 font-style: normal;
 font-weight: 400;
 line-height: 140%;
+text-align: start;
+margin-left: 12px;
 }
 
 .finishedText {
@@ -62,11 +65,28 @@ cursor: pointer;
 
 }
 
+.checkContainer div:hover{
+    background: var(--blue-100, #1E6F9F);
+    cursor: pointer;
+}
+
+
 
 .buttonDelete{
     background: none;
+    padding: 1px;
     border: none;
-    color: var(--Gray-300);
+    color: var(--Gray-300, #808080);
+    cursor: pointer;
+}
+
+.buttonDelete:hover{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 4px;
+    background: var(--Gray-400, #333);
+    color: var(--danger, #E25858);
     cursor: pointer;
 }
 
