@@ -5,6 +5,10 @@
     align-items: center;
     justify-content: center;
     margin-top:1.5rem;
+
+    @media(max-width:480px){
+        width: 80%;
+    }
 }
 
 .finishedTask{

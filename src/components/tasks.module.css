@@ -16,7 +16,11 @@
     justify-content: center;
     border-radius: 8px;
     border-top: 1px solid var(--gray-400, #333333);
-    color: var(--gray-300, #808080)
+    color: var(--gray-300, #808080);
+
+    @media(max-width:480px){
+        width: 80%;
+    }
 }
 
 .containerListTask{
@@ -35,6 +39,10 @@
     justify-content: space-between;
     align-items: flex-end;
     margin-top:4rem ;
+
+    @media(max-width:480px){
+        width: 80%;
+    }
 }
 
 .containerInfo{
